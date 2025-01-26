@@ -35,7 +35,7 @@ public class TemperatureControll : MonoBehaviour
             _Alarm.SetActive(false);
         }
         _ActiveRods = _RodsController.ActiveRodsCount;
-        if (_ActiveRods == 0)
+        if (_ActiveRods <= 12)
         {
             Temperature = Temperature + (Temperature / 10f);
             //DynamicTemperatureRise
@@ -44,7 +44,7 @@ public class TemperatureControll : MonoBehaviour
             dynamicTemperatureRise = true;
             slowTemperatureRise = false;
         }
-        else if (_ActiveRods >= 12 && _ActiveRods < 18)
+        else if (_ActiveRods > 12 && _ActiveRods < 18)
         {
             Temperature = Temperature + (Temperature / 20f);
             //SlowTemperatureRise
@@ -60,7 +60,7 @@ public class TemperatureControll : MonoBehaviour
             dynamicTemperatureRise = false;
             slowTemperatureRise = false;
         }
-        else if (_ActiveRods >= 18 && _ActiveRods < 30)
+        else if (_ActiveRods > 18 && _ActiveRods < 30)
         {
             Temperature = Temperature - (Temperature / 20f);
             //SlowTemperatureReduction

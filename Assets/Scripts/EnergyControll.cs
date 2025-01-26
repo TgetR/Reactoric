@@ -36,7 +36,7 @@ public class EnergyControll : MonoBehaviour
 
         _ActiveRods = _RodsController.ActiveRodsCount;
         Debug.Log("ECAR: " + _ActiveRods);
-        if (_ActiveRods == 0)
+        if (_ActiveRods < 6)
         {
             EnergyProduction = EnergyProduction - (EnergyProduction / 10f);
             //DynamicEnergyReduction
@@ -45,7 +45,7 @@ public class EnergyControll : MonoBehaviour
             dynamicEnergyRise = false;
             slowEnergyRise = false;
         }
-        if (_ActiveRods >= 6 && _ActiveRods < 12)
+        if (_ActiveRods > 6 && _ActiveRods < 12)
         {
             EnergyProduction = EnergyProduction - (EnergyProduction / 20f);
             //SlowEnergyReduction
