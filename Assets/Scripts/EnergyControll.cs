@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +11,8 @@ public class EnergyControll : MonoBehaviour
     public bool slowEnergyRise;
     [SerializeField] private GlobalData _GlobalData;
     [SerializeField] private GameObject _Alarm;
+    [SerializeField] private Animator _Picture;
+    [SerializeField] private TMP_Text _Text;
     private int _ActiveRods = 0;
     private RodsController _RodsController;
     private void Start()
@@ -21,6 +22,7 @@ public class EnergyControll : MonoBehaviour
     }
     private void ControlProduction()
     {
+        if (EnergyProduction  > _GlobalData.EnergyMax) _Text.text = "-Energy production plan overdrawn \n" + _Text.text;
         if (EnergyProduction  > _GlobalData.EnergyMax + 400)
         {
             SceneManager.LoadScene("GameOver");
@@ -28,10 +30,12 @@ public class EnergyControll : MonoBehaviour
         else if (EnergyProduction > _GlobalData.EnergyMax)
         {
             _Alarm.SetActive(true);
+            _Picture.SetBool("Alarm",true);
         }
         else
         {
             _Alarm.SetActive(false);
+            _Picture.SetBool("Alarm",false);
         }
 
         _ActiveRods = _RodsController.ActiveRodsCount;

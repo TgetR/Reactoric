@@ -6,7 +6,7 @@ public class InteractivePanel : MonoBehaviour
     public TMP_Text text;
     public void ActivateAllRods()
     {
-        text.text = "-Все стержни активированы";
+        text.text = "-All rods active \n" + text.text;
         GameObject[] rodsTemp = GameObject.FindGameObjectsWithTag("Rod");
         for(int i = 0; i < rodsTemp.Length; i++)
         {
@@ -15,7 +15,7 @@ public class InteractivePanel : MonoBehaviour
     }
     public void DeactivateAllRods()
     {
-        text.text = "-Все стержни деактивированы";
+        text.text = "-All rods deactive \n" + text.text;
         GameObject[] rodsTemp = GameObject.FindGameObjectsWithTag("Rod");
         for(int i = 0; i < rodsTemp.Length; i++)
         {

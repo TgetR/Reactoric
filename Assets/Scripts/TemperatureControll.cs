@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +11,8 @@ public class TemperatureControll : MonoBehaviour
     public bool slowTemperatureRise;
     [SerializeField] private GlobalData _GlobalData;
     [SerializeField] private GameObject _Alarm;
+    [SerializeField] private Animator _Picture;
+    [SerializeField] private TMP_Text _Text;
     private RodsController _RodsController;
     private int _ActiveRods = 0;
     void Start()
@@ -21,18 +22,22 @@ public class TemperatureControll : MonoBehaviour
     }
 
     void ControlProduction()
-    {   if (Temperature  > _GlobalData.TemperatureMax + 400)
+    {   
+        if (Temperature  > _GlobalData.TemperatureMax ) _Text.text = "-Temperature maximum is exceeded \n" + _Text.text;
+        if (Temperature  > _GlobalData.TemperatureMax + 400)
         {
             SceneManager.LoadScene("GameOver");
         }
         else if (Temperature > _GlobalData.TemperatureMax)
         {
             _Alarm.SetActive(true);
+            _Picture.SetBool("Alarm",true);
         }
 
         else
         {
             _Alarm.SetActive(false);
+            _Picture.SetBool("Alarm",false);
         }
         _ActiveRods = _RodsController.ActiveRodsCount;
         if (_ActiveRods <= 12)

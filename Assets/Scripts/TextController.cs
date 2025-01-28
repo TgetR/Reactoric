@@ -20,10 +20,10 @@ public class TextController : MonoBehaviour
     }
     private void Update()
     {
-        textEnergy.text = "Энерговыработка: " + energy.EnergyProduction + " МВат.час";
-        textEnergyMax.text = "Максимум: " + globalData.EnergyMax + " МВат.час";
-        textTemperature.text = "Температура: " + temperature.Temperature + "°C";
-        textTemperatureMax.text = "Максимум: " + globalData.TemperatureMax + "°C";
+        textEnergy.text = "ENERGY PRODUCTION:  " + energy.EnergyProduction + "MWh";
+        textEnergyMax.text = "Required: " + globalData.EnergyMax + " MWh";
+        textTemperature.text = "Temperature: " + temperature.Temperature + "C";
+        textTemperatureMax.text = "Maximum: " + globalData.TemperatureMax + "C";
 
     }
 }
