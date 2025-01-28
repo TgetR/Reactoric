@@ -12,7 +12,6 @@ public class EnergyControll : MonoBehaviour
     public bool slowEnergyRise;
     [SerializeField] private GlobalData _GlobalData;
     [SerializeField] private GameObject _Alarm;
-    [SerializeField] private Animator _Picture;
     [SerializeField] private TMP_Text _Text;
     private int _ActiveRods = 0;
     private RodsController _RodsController;
@@ -37,12 +36,10 @@ public class EnergyControll : MonoBehaviour
         else if (EnergyProduction > _GlobalData.EnergyMax)
         {
             _Alarm.SetActive(true);
-            _Picture.SetBool("Alarm",true);
         }
         else
         {
             _Alarm.SetActive(false);
-            _Picture.SetBool("Alarm",false);
         }
 
         _ActiveRods = _RodsController.ActiveRodsCount;

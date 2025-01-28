@@ -12,7 +12,6 @@ public class TemperatureControll : MonoBehaviour
     public bool slowTemperatureRise;
     [SerializeField] private GlobalData _GlobalData;
     [SerializeField] private GameObject _Alarm;
-    [SerializeField] private Animator _Picture;
     [SerializeField] private TMP_Text _Text;
     private RodsController _RodsController;
     private int _ActiveRods = 0;
@@ -37,13 +36,11 @@ public class TemperatureControll : MonoBehaviour
         else if (Temperature > _GlobalData.TemperatureMax)
         {
             _Alarm.SetActive(true);
-            _Picture.SetBool("Alarm",true);
         }
 
         else
         {
             _Alarm.SetActive(false);
-            _Picture.SetBool("Alarm",false);
         }
         _ActiveRods = _RodsController.ActiveRodsCount;
         if (_ActiveRods <= 12)

@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
     public void NewGameConfirm()
     {
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene("StartAnimationScene");
+        SceneManager.LoadScene("MainScene");
     }
     public void NewGameCancel()
     {
@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     }
     public void ContinueGame()
     {
-        SceneManager.LoadScene("StartAnimationScene");
+        SceneManager.LoadScene("MainScene");
     }
     public void Quit()
     {
