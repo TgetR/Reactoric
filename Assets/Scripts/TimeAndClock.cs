@@ -13,6 +13,7 @@ public int LeftMinutes = 00;
 public int LeftHours = 12;
 private void Start() 
 {
+    Time.timeScale = 1f;
     InvokeRepeating("TimeBegin",0,0.25f);
 }
 private void Update() 

@@ -4,6 +4,10 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject panel;
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
    public void NewGame()
     {
         panel.SetActive(true);
@@ -24,5 +28,9 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    public void MainMenuLoad()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
