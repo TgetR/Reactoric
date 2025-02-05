@@ -11,8 +11,10 @@ public int TimeMinutes = 00;
 public int TimeHours = 8;
 public int LeftMinutes = 00;
 public int LeftHours = 12;
+private Fatigue _fatigue;
 private void Start() 
 {
+    _fatigue = gameObject.GetComponent<Fatigue>();
     Time.timeScale = 1f;
     InvokeRepeating("TimeBegin",0,0.25f);
 }
@@ -41,6 +43,7 @@ private void TimeBegin()
     }
     if(LeftMinutes <= 0)
     {
+        _fatigue.FatigueIndex--;
         LeftMinutes = 59;
         LeftHours--;
     }
