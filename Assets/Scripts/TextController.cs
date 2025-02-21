@@ -13,6 +13,7 @@ public class TextController : MonoBehaviour
     public TMP_Text textEnergy;
     public TMP_Text textEnergyMax;
     public GlobalData globalData;
+    private int _Fatigue;
     private void Start()
     {
         temperature = GetComponent<TemperatureControll>();
@@ -21,8 +22,8 @@ public class TextController : MonoBehaviour
     private void Update()
     {
         textEnergy.text = "ENERGY PRODUCTION:  " + ((float)(int)(energy.EnergyProduction * 100)) / 100 + "MWh";
-        textEnergyMax.text = "Required: " + globalData.EnergyMax + " MWh";
         textTemperature.text = "Temperature: " + ((float)(int)(temperature.Temperature * 100)) / 100 + "C";
         textTemperatureMax.text = "Maximum: " + globalData.TemperatureMax + "C";
+        textEnergyMax.text = "Required: " + globalData.EnergyMax + " MWh";
     }
 }
