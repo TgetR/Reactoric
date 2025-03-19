@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TextLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TextLocalization
+  m_TableCollectionNameGuidString: 4768873c2eb1828469e612c08b4a4d69
+  m_Entries:
+  - m_Id: 792377674055680
+    m_Key: MainMenu/MainMenu/Canvas/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792420695031808
+    m_Key: MainMenu/MainMenu/Canvas/Button (2)/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792440479563776
+    m_Key: MainMenu/MainMenu/Canvas/Button (1)/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792501754150912
+    m_Key: MainMenu/MainMenu/Canvas/Button (3)/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792579969531904
+    m_Key: MainMenu/MainMenu/NewGameConfirmPanel/Canvas/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792781291929600
+    m_Key: MainMenu/MainMenu/NewGameConfirmPanel/Canvas/Button (1)/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792799155470336
+    m_Key: MainMenu/MainMenu/NewGameConfirmPanel/Canvas/Button (2)/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792989908221952
+    m_Key: GameOver/Canvas/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793113581469696
+    m_Key: Win/Canvas/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793251729260544
+    m_Key: Win/Canvas/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793651115081728
+    m_Key: Tutorial/Tutorial/Canvas/FIRST/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793850654900224
+    m_Key: Tutorial/Tutorial/Canvas/SECOND/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794125713162240
+    m_Key: Tutorial/Tutorial/Canvas/THIRD/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794265421234176
+    m_Key: Tutorial/Tutorial/Canvas/FOURTH/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794485240512512
+    m_Key: Tutorial/Tutorial/Canvas/FOURTH/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794510087569408
+    m_Key: Tutorial/Tutorial/Canvas/THIRD/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794530497052672
+    m_Key: Tutorial/Tutorial/Canvas/SECOND/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794554782072832
+    m_Key: Tutorial/Tutorial/Canvas/FIRST/Button/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1780663005021733112
+  references:
+    version: 2
+    RefIds:
+    - rid: 1780663005021733112
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1740668086323

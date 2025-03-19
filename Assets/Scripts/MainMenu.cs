@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -7,6 +8,14 @@ public class MainMenu : MonoBehaviour
     public void Tutorial()
     {
         SceneManager.LoadScene("Tutorial");
+    }
+    public void LocalizationRu()
+    {
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+    }
+    public void LocalizationEn()
+    {
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
     }
    public void NewGame()
     {

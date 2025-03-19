@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Reactors.sln"
+    "dotnet.defaultSolution": "Reactoric.sln"
 }

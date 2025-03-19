@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextLocalization_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4768873c2eb1828469e612c08b4a4d69, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 792377674055680
+    m_Localized: New game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792420695031808
+    m_Localized: TUTORIAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792440479563776
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792501754150912
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792579969531904
+    m_Localized: 'When you create a new game, all saves will be deleted.
+
+      Are
+      you sure?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792781291929600
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792799155470336
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 792989908221952
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793113581469696
+    m_Localized: You win!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793251729260544
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793651115081728
+    m_Localized: These are energy production and temperature monitors, if you exceed
+      the temperature by more than 300 degrees the game will end, same with energy
+      production.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 793850654900224
+    m_Localized: These are rod controllers, you can control each individual rod by
+      clicking on them or turn them all off and on at the same time using the bottom
+      panel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794125713162240
+    m_Localized: These are the log and task panels. The green one will display your
+      last actions, the purple one your task. If you complete the task, you win.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794265421234176
+    m_Localized: It's a watch. The green ones show the time right now, the purple
+      ones show how long you have left to work. Once the work time is up you win,
+      unless the task says otherwise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794485240512512
+    m_Localized: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794510087569408
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794530497052672
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 794554782072832
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
