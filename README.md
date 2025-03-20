@@ -3,7 +3,7 @@
 [itch.io](https://tgetr.itch.io/reactors)
 ### Dev Logs
 #### 0.3
-[Announcement](https://tgetr.itch.io/reactoric/devlog/893817/game-status-update-announcement-of-03)
+[0.3.1](https://tgetr.itch.io/reactoric/devlog/908553/buildaplha-031)
 #### 0.2
 [0.2.4](https://tgetr.itch.io/reactors/devlog/891709/buildaplha-024-fatigue-build) <-
 [0.2.3](https://tgetr.itch.io/reactors/devlog/881015/buildaplha-023) <-
