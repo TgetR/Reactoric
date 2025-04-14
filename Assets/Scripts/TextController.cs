@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class TextController : MonoBehaviour
 {
-    TemperatureControll temperature;
-    EnergyControll energy;
+    ReactorController controller;
     public TMP_Text textTemperature;
     public TMP_Text textTemperatureMax;
     public TMP_Text textEnergy;
@@ -16,13 +15,12 @@ public class TextController : MonoBehaviour
     private int _Fatigue;
     private void Start()
     {
-        temperature = GetComponent<TemperatureControll>();
-        energy = GetComponent<EnergyControll>();
+        controller = GetComponent<ReactorController>();
     }
     private void Update()
     {
-        textEnergy.text = "ENERGY PRODUCTION:  " + ((float)(int)(energy.EnergyProduction * 100)) / 100 + "MWh";
-        textTemperature.text = "Temperature: " + ((float)(int)(temperature.Temperature * 100)) / 100 + "C";
+        textEnergy.text = "ENERGY PRODUCTION:  " + ((float)(int)(controller.EnergyProduction * 100)) / 100 + "MWh";
+        textTemperature.text = "Temperature: " + ((float)(int)(controller.Temperature * 100)) / 100 + "C";
         textTemperatureMax.text = "Maximum: " + globalData.TemperatureMax + "C";
         textEnergyMax.text = "Required: " + globalData.EnergyMax + " MWh";
     }
