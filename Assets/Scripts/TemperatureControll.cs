@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,87 +7,100 @@ public class TemperatureControll : MonoBehaviour
 {
     public float Temperature = 120;
     public bool Normal = true;
-    public bool dynamicTemperatureReduction;
-    public bool slowTemperatureReduction;
-    public bool dynamicTemperatureRise;
-    public bool slowTemperatureRise;
-    [SerializeField] private GlobalData _GlobalData;
-    [SerializeField] private GameObject _Alarm;
-    [SerializeField] private TMP_Text _Text;
-    private RodsController _RodsController;
-    private int _ActiveRods = 0;
+    private enum TemperatureChangeType
+    {
+    None,
+    DynamicRise,
+    SlowRise,
+    SlowReduction,
+    DynamicReduction
+    }
+    private TemperatureChangeType temperatureChangeType = TemperatureChangeType.None;
+    [SerializeField] private GlobalData _globalData;
+    [SerializeField] private GameObject _alarm;
+    [SerializeField] private TMP_Text _temperatureText;
+    [SerializeField]private RodsController _rodsController;
+    private int _activeRods = 0;
+
     void Start()
     {
-        _RodsController = GameObject.Find("RodsInfo").GetComponent<RodsController>();
-        InvokeRepeating("ControlProduction", 0f, 0.75f);
+        StartCoroutine(ControlLoop());
+    }
+
+    IEnumerator ControlLoop()
+    {
+        while (true)
+        {
+            ControlProduction();
+            yield return new WaitForSeconds(0.75f);
+        }
     }
 
     void ControlProduction()
     {   
-        if (Temperature  > _GlobalData.TemperatureMax )
+        _activeRods = _rodsController.ActiveRodsCount;
+        UpdateAlarmStatus(); //Alarm?
+        CheckRods();
+        UpdateTemperatureDynamic();
+    }
+    void CheckRods()
+    {
+        temperatureChangeType = _activeRods switch
+            {
+                <= 12 => TemperatureChangeType.DynamicRise,
+                > 12 and < 18 => TemperatureChangeType.SlowRise,
+                18 => TemperatureChangeType.None,
+                > 18 and < 30 => TemperatureChangeType.SlowReduction,
+                >= 30 => TemperatureChangeType.DynamicReduction
+            };
+    }
+    void UpdateTemperatureDynamic()
+    {
+        switch (temperatureChangeType)
         {
-            _Text.text = "-Temperature maximum is exceeded \n" + _Text.text;
+            case TemperatureChangeType.None:
+                //Stable
+            break;
+            //Dynamic temperature Rise
+            case TemperatureChangeType.DynamicRise:
+                Temperature = Temperature + (Temperature / 10f);
+            break;
+            //Slow temperature Rise
+            case TemperatureChangeType.SlowRise:
+                Temperature = Temperature + (Temperature / 20f);
+            break;
+            //Dynamic temperature Reduction
+            case TemperatureChangeType.DynamicReduction:
+                Temperature = Temperature - (Temperature / 10f);
+            break;
+            //Slow temperature Reduction
+            case TemperatureChangeType.SlowReduction:
+                Temperature = Temperature - (Temperature / 20f);
+            break;
+        }
+    }
+    void UpdateAlarmStatus()
+    {
+        if (Temperature  > _globalData.TemperatureMax )
+        {
+            _temperatureText.text = "-Temperature maximum is exceeded \n" + _temperatureText.text;
             Normal = false;
         }
         else Normal = true;
-        if (Temperature  > _GlobalData.TemperatureMax + 400)
+
+        
+        if (Temperature  > _globalData.TemperatureMax + 400)
         {
             SceneManager.LoadScene("GameOver");
         }
-        else if (Temperature > _GlobalData.TemperatureMax)
+        else if (Temperature > _globalData.TemperatureMax)
         {
-            _Alarm.SetActive(true);
+            _alarm.SetActive(true);
         }
-
         else
         {
-            _Alarm.SetActive(false);
+            _alarm.SetActive(false);
         }
-        _ActiveRods = _RodsController.ActiveRodsCount;
-        if (_ActiveRods <= 12)
-        {
-            Temperature = Temperature + (Temperature / 10f);
-            //DynamicTemperatureRise
-            dynamicTemperatureReduction = false;
-            slowTemperatureReduction = false;
-            dynamicTemperatureRise = true;
-            slowTemperatureRise = false;
-        }
-        else if (_ActiveRods > 12 && _ActiveRods < 18)
-        {
-            Temperature = Temperature + (Temperature / 20f);
-            //SlowTemperatureRise
-            dynamicTemperatureReduction = false;
-            slowTemperatureReduction = false;
-            dynamicTemperatureRise = false;
-            slowTemperatureRise = true;
-        }
-        else if (_ActiveRods == 18)
-        {
-            dynamicTemperatureReduction = false;
-            slowTemperatureReduction = false;
-            dynamicTemperatureRise = false;
-            slowTemperatureRise = false;
-        }
-        else if (_ActiveRods > 18 && _ActiveRods < 30)
-        {
-            Temperature = Temperature - (Temperature / 20f);
-            //SlowTemperatureReduction
-            dynamicTemperatureReduction = false;
-            slowTemperatureReduction = true;
-            dynamicTemperatureRise = false;
-            slowTemperatureRise = false;
-        }
-        else if (_ActiveRods >= 30)
-        {
-            Temperature = Temperature - (Temperature / 10f);
-            //DynamicTemperatureReduction
-            dynamicTemperatureReduction = true;
-            slowTemperatureReduction = false;
-            dynamicTemperatureRise = false;
-            slowTemperatureRise = false;
-        }
-
     }
 
 }

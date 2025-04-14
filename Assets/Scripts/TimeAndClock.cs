@@ -17,6 +17,7 @@ private void Start()
     _fatigue = gameObject.GetComponent<Fatigue>();
     Time.timeScale = 1f;
     InvokeRepeating("TimeBegin",0,0.25f);
+    LeftHours = Random.Range(6,20);
 }
 private void Update() 
 {

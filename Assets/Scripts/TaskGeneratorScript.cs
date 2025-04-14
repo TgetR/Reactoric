@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 public class TaskGeneratorScript : MonoBehaviour
 {
     public float multiplier = 1.0f;
@@ -33,11 +34,13 @@ public class TaskGeneratorScript : MonoBehaviour
     public void EnergyTime()
     {
         if(_Energy.Normal) _DurationInSec--;
-        _Text.text = "Task: keep energy production normal for the duration: " + _StartDurationInSec + " seconds";
+        if(LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0]) _Text.text = "Task: keep energy production normal for the duration: " + _StartDurationInSec + " seconds";
+        else if(LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1]) _Text.text = "Задание: удерживайте производство энергии на приемлемом уровне в течении: " + _StartDurationInSec + " секунд";
     }
     public void Time()
     {
         if(_Energy.Normal && _Temperature.Normal) _DurationInSec--;
-        _Text.text = "Task: keep normal for the duration: " + _StartDurationInSec + " seconds";
+        if(LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0]) _Text.text = "Task: keep normal for the duration: " + _StartDurationInSec + " seconds";
+        else if(LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1]) _Text.text = "Задание: сохраняйте все значения в норме в течении" + _StartDurationInSec + " секунд";
     }
 }
