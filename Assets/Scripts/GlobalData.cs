@@ -9,27 +9,33 @@ public class GlobalData : MonoBehaviour
     public int Cold = 0;
     public int EnergyMax = 175;
     public int TemperatureMax = 350;
+
     private void Start()
     {
-        UploadData();
+        LoadFromPrefs();
     }
+
     private void OnApplicationQuit()
     {
-        SaveData();
+        SaveToPrefs();
     }
-    public void UploadData()
-    {
-        Day = PlayerPrefs.GetInt("Day");
-        ReactorStatus = PlayerPrefs.GetInt("ReactorStatus");
-        Heat = PlayerPrefs.GetInt("Heat");
-        Cold = PlayerPrefs.GetInt("Cold");
-    }
-    public void SaveData()
+
+    public void SaveToPrefs()
     {
         PlayerPrefs.SetInt("Day", Day);
         PlayerPrefs.SetInt("ReactorStatus", ReactorStatus);
         PlayerPrefs.SetInt("Heat", Heat);
         PlayerPrefs.SetInt("Cold", Cold);
+        PlayerPrefs.SetString("PlayerName", PlayerName);
+        PlayerPrefs.Save();
     }
 
+    public void LoadFromPrefs()
+    {
+        Day = PlayerPrefs.GetInt("Day", 0);
+        ReactorStatus = PlayerPrefs.GetInt("ReactorStatus", 0);
+        Heat = PlayerPrefs.GetInt("Heat", 0);
+        Cold = PlayerPrefs.GetInt("Cold", 0);
+        PlayerName = PlayerPrefs.GetString("PlayerName", "Unknown");
+    }
 }

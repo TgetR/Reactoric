@@ -8,7 +8,7 @@ GlobalData data;
     private void Start()
     {
         data = new GlobalData();
-        data.UploadData();
+        data.LoadFromPrefs();
     }
     private void Update()
     {
