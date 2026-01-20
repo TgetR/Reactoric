@@ -1,0 +1,241 @@
+commit b833f807f3fa09b0ff051a7da7f90349afeaf397
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Fri May 9 17:59:15 2025 +0300
+
+    Minor Tutorial update
+
+commit 241b66e48f1aac1c2ec1aaa766d2230594a6cca2
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Tue Apr 15 14:44:48 2025 +0300
+
+     Mini redesign of Fatigue
+
+commit a280f09f026b59f9176486152c0c73b14839f082
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Tue Apr 15 14:30:30 2025 +0300
+
+    Final review of temperature and energy production calculations
+
+commit 46a4cefba026a8fa8fa42090ec7dfd15998d5ea7
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Mon Apr 14 19:27:19 2025 +0300
+
+    Early Reactor Math Update
+
+commit 56cc3eae78ec93f7bcc5153217fe610f6c7dddde
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Mon Apr 14 18:55:36 2025 +0300
+
+    PRE-PHYSIC
+    
+    BackUp commit.
+    Update Energy and Temperature controller
+
+commit e4f82b043f12032b6ab08e073e5a3430bfba604b
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Thu Mar 20 15:53:40 2025 +0300
+
+    Update README.md
+
+commit d2d18b5ee5e6f6158c92d85016eb9290dc325a6e
+Merge: 1d2f020 9c73334
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Wed Mar 19 19:12:50 2025 +0300
+
+    Merge branch 'main' of https://github.com/TgetR/Reactoric
+
+commit 1d2f0202fdacc8b14548659353d3b8835dc21971
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Wed Mar 19 19:12:48 2025 +0300
+
+    Rename, Localization
+
+commit 9c73334ab1f41288e49de6b48919778bf87551de
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sat Mar 1 22:39:54 2025 +0300
+
+    Update README.md
+
+commit 635239a138033626fbc25a7197377ed622596c9f
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Feb 23 22:14:05 2025 +0300
+
+    Update GameOver.unity
+
+commit db13fb4a3ee4d602847e4d73e9fd2e0fa830d999
+Merge: 7c7efac 511537a
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Feb 23 22:13:46 2025 +0300
+
+    Merge branch 'main' of https://github.com/TgetR/Reactor
+
+commit 7c7efac07ed4773afcbcdc12bf29bfc4f2f686e7
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Feb 23 22:13:36 2025 +0300
+
+    Music Update? O-o
+
+commit 511537a7fcef3ffea19f9ed53607016fc5e50464
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Feb 23 00:40:27 2025 +0300
+
+    Update README.md
+
+commit 6cbd62a9ae447cc32e050695bed8d4e8b753d211
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Feb 23 00:39:01 2025 +0300
+
+    Update README.md
+
+commit a01a314739e165d337301bc1fc9d1085659f161c
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Fri Feb 21 17:48:51 2025 +0300
+
+    Scene update
+
+commit 11f0dee6096d53b66ad7f84ee4504353caa8e3ce
+Merge: 8a2c476 3b8d76d
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Fri Feb 21 17:45:30 2025 +0300
+
+    Merge branch 'main' of https://github.com/TgetR/Reactor
+
+commit 8a2c47684cc8c5304b73ebfd5ca0f0e4e5b57413
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Fri Feb 21 17:45:22 2025 +0300
+
+    Fatigue 2
+
+commit 3b8d76de3f519affe25869a06c0b3d102d6ab6e4
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sat Feb 15 17:13:40 2025 +0300
+
+    Update README.md
+
+commit abbabe11e6b8df23ce8595f5bcfadfd02fcc8d87
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Wed Feb 5 22:34:16 2025 +0300
+
+    Fatigue
+    
+    -Early Fatigue
+
+commit fa77ebf6e736326e60eddf9732ed0b6b0ba75add
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Mon Feb 3 19:57:05 2025 +0300
+
+    Update LiberationSans SDF - Fallback.asset
+
+commit 436f8eaa9124d7a5605ffde8d17f5dbd5b9f53ce
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Mon Feb 3 18:42:29 2025 +0300
+
+    Tutorial and other
+    
+    -Add tutorial
+    -Replace button "Restart" to button "Menu" in GameOver and Win scenes
+
+commit 601176b6d38595c4da5bc65d597c73eff7cb9b87
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Mon Feb 3 18:16:00 2025 +0300
+
+    Finally time
+
+commit 5e39995df21ab13c5e9c983cc7c8addf0a85ab71
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Thu Jan 30 19:53:48 2025 +0300
+
+    Main menu textures Update
+
+commit e413c29b6037096c6833eb920b39f82a9f00b8a3
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Thu Jan 30 19:40:51 2025 +0300
+
+    Finally texture update
+    
+    All textures in main scene updated
+
+commit bd140a75f7854f3c5e456ef477909dfaf587158a
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Wed Jan 29 22:40:26 2025 +0300
+
+    Update issue templates
+
+commit 995c4ae68254bb88a729936c8958bdc7d312d03e
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Wed Jan 29 13:53:57 2025 +0300
+
+    Update README.md
+
+commit 2d1807af6b273a9ae3508c2120d8de302411ade7
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Tue Jan 28 21:34:28 2025 +0300
+
+    Update README.md
+
+commit f1b217c9d206cb1d72f7757f758be884e56ba857
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Tue Jan 28 21:14:23 2025 +0300
+
+    Graphics аnd language update
+    
+    Game now on english (now exactly)
+    Update Fonts(now exactly)
+    Update graphics (New pictures)
+    Update log, now its log
+    Add task wich random selection
+    Delete Start Animation and all related files
+    No more generative content in the game
+
+commit 8279cda7e48ab66afcc03522b7bd6d575f88e9d1
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Tue Jan 28 20:48:17 2025 +0300
+
+    Repair
+
+commit be75669ee988c7fce5dd7e47dbb03259821cfb70
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Tue Jan 28 20:25:00 2025 +0300
+
+    hotfix
+
+commit 2d5339e40095d55472c969cd7988a1bea24c2140
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Jan 26 17:09:56 2025 +0300
+
+    Update settings.json
+
+commit d455ea605d762444d77b06345f629eb86d6c06a6
+Merge: 0b17090 0748654
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Jan 26 17:09:14 2025 +0300
+
+    Merge remote-tracking branch 'origin/main'
+
+commit 0b17090ddbc9162ff07733c44c56635e59dc482e
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Jan 26 17:08:22 2025 +0300
+
+    0.2.1
+    
+    -Unity 6 (Maybe in intial)
+    -Buttons for activate and deactivate all rods
+    -Rods bug fix
+
+commit 074865482c5327b5a00604dfbae2a4e0dca14300
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Jan 26 15:54:12 2025 +0300
+
+    Update LICENSE
+
+commit c626c5c88ac68098a81f0714cd07da9a14b74718
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Jan 26 15:49:03 2025 +0300
+
+    Initial commit
+
+commit 1673cfa00a8f5a326c47bef8e39102064f0b3654
+Author: TgetR <123860470+TgetR@users.noreply.github.com>
+Date:   Sun Jan 26 15:47:12 2025 +0300
+
+    Initial commit
