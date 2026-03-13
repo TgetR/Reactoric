@@ -7,13 +7,13 @@
 **Reactoric** --- мой первый полноценный независимый проект, выпущенный на Itch, основная суть игры заключается в управлении реактором (сильно упрощенном, скорее только его стержнями). 	В игре присутствуют интересные механики, такие как:
 
  - Управление стержнями реактора (главная механика)
- ![](Assets/[DOCS] Images/[SCR] Reactor.png)
+ ![](<Assets/[DOCS] Images/[SCR] Reactor.png>)
  - **Задания (Выбираются случайно, из заготовленного пула)**
- ![](Assets/[DOCS] Images/[SCR] Task.png)
+ ![](<Assets/[DOCS] Images/[SCR] Task.png>)
  - **Усталость (Нарастает по мере смены, при 12-часовых сменах почти всегда кончается раньше времени и вызывает дебафы)**
- ![](Assets/[DOCS] Images/[SCR] FatigueZero.png) ![]Assets/[DOCS] Images/[SCR] FatigueHalf.png) ![](Assets/[DOCS] Images/[SCR] FatigueFull.png)
+ ![](<Assets/[DOCS] Images/[SCR] FatigueZero.png>) ![](<Assets/[DOCS] Images/[SCR] FatigueHalf.png>) ![](<Assets/[DOCS] Images/[SCR] FatigueFull.png>)
  *(Шкала усталости. Зелёное - остаток энергии)*
- ![](Assets/[DOCS] Images/[SCR] DarkFullScreen.png)
+ ![](<Assets/[DOCS] Images/[SCR] DarkFullScreen.png>)
  *Эффект затемнения, возникает когда энергия кончается*
  
  - **Температура и энерговыработка (Цели, то из-за чего игра может кончится)**
@@ -107,3 +107,4 @@
         PlayerPrefs.SetString("PlayerName", PlayerName);
         PlayerPrefs.Save();
     }
+   **CI/CD & Безопасность:** Настроен автоматический статический анализ кода (SAST) с использованием **GitHub CodeQL** для отслеживания уязвимостей и контроля качества архитектуры.
